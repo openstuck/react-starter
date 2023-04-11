@@ -1,0 +1,40 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "impliedStrict": true
+    },
+    "ecmaVersion": 12
+  },
+  "extends": [
+    "react-app",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react-hooks/recommended",
+    "prettier"
+  ],
+  "plugins": ["prettier", "react", "react-hooks"],
+  "settings": {
+    "import/extensions": [".js", ".jsx"],
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["node_modules", "src/"]
+      }
+    }
+  },
+
+  "rules": {
+    "react/prop-types": 0,
+    "jsx-a11y/anchor-is-valid": "off",
+    "no-unused-vars": "warn",
+    "react/no-unknown-property": "warn"
+  }
+}
